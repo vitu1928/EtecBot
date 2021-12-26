@@ -1,0 +1,292 @@
+[
+  {
+    "name": "fc",
+    "description": "Calcular fc (fator de correção): pb/pl",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pb",
+        "type": "NUMBER",
+        "description": "Peso bruto do alimento",
+        "required": true
+      },
+      {
+        "name": "pl",
+        "type": "NUMBER",
+        "description": "Peso liquído (limpo) do alimento",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "pb",
+    "description": "Calcular pb (peso bruto): pl*fc",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pl",
+        "type": "NUMBER",
+        "description": "Peso liquído (limpo) do alimento",
+        "required": true
+      },
+      {
+        "name": "fc",
+        "type": "NUMBER",
+        "description": "Fator de correção do alimento",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "pl",
+    "description": "Calcular pl (peso liquído): pb/fc",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pb",
+        "type": "NUMBER",
+        "description": "Peso bruto do alimento",
+        "required": true
+      },
+      {
+        "name": "fc",
+        "type": "NUMBER",
+        "description": "Fator de correção do alimento",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "ic",
+    "description": "Calcular ic (índice de cocção): pcoz/pl",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pcoz",
+        "type": "NUMBER",
+        "description": "Peso do alimento processado",
+        "required": true
+      },
+      {
+        "name": "pl",
+        "type": "NUMBER",
+        "description": "Peso do alimento cru",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "pl_",
+    "description": "Calulcar pl (peso do liquído): pcoz/ic",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pcoz",
+        "type": "NUMBER",
+        "description": "Peso do alimento processado",
+        "required": true
+      },
+      {
+        "name": "ic",
+        "type": "NUMBER",
+        "description": "Índice de cocção",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "pcoz",
+    "description": "Calulcar pcoz (peso do alimento processado): pl*ic",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pl",
+        "type": "NUMBER",
+        "description": "Peso do alimento limpo/liquído",
+        "required": true
+      },
+      {
+        "name": "ic",
+        "type": "NUMBER",
+        "description": "Índice de cocção",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "rendimento",
+    "description": "Calcular pl (peso limpo e cru): pl*ic",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pl",
+        "type": "NUMBER",
+        "description": "Peso liquído cru",
+        "required": true
+      },
+      {
+        "name": "ic",
+        "type": "NUMBER",
+        "description": "Índice de Cocção",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "ir",
+    "description": "Calcular ir (índice de Reidratação): pr/ps",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pr",
+        "type": "NUMBER",
+        "description": "Peso do alimento reidratado",
+        "required": true
+      },
+      {
+        "name": "ps",
+        "type": "NUMBER",
+        "description": "Peso seco",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "pr",
+    "description": "Calcular pr (peso reidratado): ps*ir",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "ps",
+        "type": "NUMBER",
+        "description": "Peso seco",
+        "required": true
+      },
+      {
+        "name": "ir",
+        "type": "NUMBER",
+        "description": "Índice de reidratação",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "ps",
+    "description": "Calcular ps (peso seco): pr/ir",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pr",
+        "type": "NUMBER",
+        "description": "Peso reidratado",
+        "required": true
+      },
+      {
+        "name": "ir",
+        "type": "NUMBER",
+        "description": "Índice de reidratação",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "perdas_totais",
+    "description": "Calcular as perdas totais (perdas totais/peso bruto cru * 100 = ...%)",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "perdas_totais",
+        "type": "NUMBER",
+        "description": "Soma de todas as perdas em gramas",
+        "required": true
+      },
+      {
+        "name": "pb",
+        "type": "NUMBER",
+        "description": "Peso bruto cru em gramas",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "per_capta_liquído",
+    "description": "Calcular o per capta (peso do alimento cru e limpo em gramas para uma refeição pl/porções)",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pl",
+        "type": "NUMBER",
+        "description": "Peso do alimento cru",
+        "required": true
+      },
+      {
+        "name": "porções",
+        "type": "NUMBER",
+        "description": "Número de porções",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "per_capta_bruto",
+    "description": "Calcular o per capta (peso do alimento bruto em gramas para uma refeição pb/porções)",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "pb",
+        "type": "NUMBER",
+        "description": "Peso do alimento bruto",
+        "required": true
+      },
+      {
+        "name": "porções",
+        "type": "NUMBER",
+        "description": "Número de porções",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "conversão_de_medidas",
+    "description": "Converter ",
+    "type": "SUB_COMMAND",
+    "options": [
+      {
+        "name": "quilograma_para_grama",
+        "type": "NUMBER",
+        "description": "Converter quilograma para grama",
+        "required": false
+      },
+      {
+        "name": "grama_para_quilograma",
+        "type": "NUMBER",
+        "description": "Converter grama para quilograma",
+        "required": false
+      },
+      {
+        "name": "miligrama_para_grama",
+        "type": "NUMBER",
+        "description": "Converter miligrama para grama",
+        "required": false
+      },
+      {
+        "name": "grama_para_miligrama",
+        "type": "NUMBER",
+        "description": "Converter grama para miligrama",
+        "required": false
+      },
+      {
+        "name": "miligrama_para_quilograma",
+        "type": "NUMBER",
+        "description": "Converter miligrama para quilograma",
+        "required": false
+      },
+      {
+        "name": "quilograma_para_miligrama",
+        "type": "NUMBER",
+        "description": "Converter quilograma para miligrama",
+        "required": false
+      }
+    ]
+  }
+]

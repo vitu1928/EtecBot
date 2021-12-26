@@ -1,0 +1,91 @@
+{
+  "1": [
+    {
+      "name": "Matemática",
+      "description": "Duas aulas de matemática",
+      "value": [0, 1]
+    }, 
+    {
+      "name": "TCR",
+      "description": "Quatro aulas de TCR",
+      "value": [2, 5]
+    }
+  ],
+  "2": [
+    {
+      "name": "HEG",
+      "description": "Duas aulas de HEG",
+      "value": [0, 1]
+    },
+    {
+      "name": "LPL",
+      "description": "Uma aula de LPL",
+      "value": [2, 2]
+    },
+    {
+      "name": "Matemática",
+      "description": "Uma aula de Matemática",
+      "value": [3, 3]
+    },
+    {
+      "name": "História",
+      "description": "Uma aula de História",
+      "value": [4, 4]
+    },
+    {
+      "name": "Química",
+      "description": "Uma aula de Química",
+      "value": [5, 5]
+    }
+  ],
+  "3": [
+    {
+      "name": "Física",
+      "description": "Duas aulas de Física",
+      "value": [0, 1]
+    },
+    {
+      "name": "Geografia",
+      "description": "Duas aulas de Geografia",
+      "value": [2, 3]
+    },
+    {
+      "name": "LPL",
+      "description": "Duas aulas de LPL",
+      "value": [4, 5]
+    }
+  ],
+  "4": [
+    {
+      "name": "Química",
+      "description": "Uma aula de Química",
+      "value": [0, 0]
+    },
+    {
+      "name": "História",
+      "description": "Uma aula de História",
+      "value": [1, 1]
+    }, {
+      "name": "Inglês",
+      "description": "Duas aulas de Inglês",
+      "value": [2, 3]
+    },
+    {
+      "name": "HSSA",
+      "description": "Duas aulas de HSSA",
+      "value": [4, 5]
+    }
+  ],
+  "5": [
+    {
+      "name": "Biologia",
+      "description": "Duas aulas de Biologia",
+      "value": [0, 1]
+    },
+    {
+      "name": "TDN",
+      "description": "Quatro aulas de TDN",
+      "value": [2, 5]
+    }
+  ]
+}

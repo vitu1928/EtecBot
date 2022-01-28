@@ -119,7 +119,11 @@ module.exports = class LicaoInteraction extends Interaction {
       return (i.customId === 'licaomenu' || i.customId === 'materiamenu') && i.user.id === authorId
     }
 
-    const collectorMenu = messageButton.createMessageComponentCollector({ filter: filterMenu, componentType: "SELECT_MENU"})
+    const collectorMenu = messageButton.createMessageComponentCollector({ 
+      filter: filterMenu, 
+      componentType: "SELECT_MENU"
+    })
+    
     collectorMenu.on('collect', async interact => {
       let id = interact.customId
       try {

@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "node": "^16.13.1"
+    "node": "^16.13.2"
   },
   "dependencies": {
     "axios": "^0.22.0",

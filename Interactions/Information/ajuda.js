@@ -83,7 +83,7 @@ module.exports = class HelpInteraction extends Interaction {
           menu
         ])
 
-      let message = await interaction.reply({
+      await interaction.reply({
         embeds: [
           new MessageEmbed({
             title: "Etec bot ajudas",
@@ -99,12 +99,13 @@ module.exports = class HelpInteraction extends Interaction {
         ]
       })
 
-      message = await interaction.fetchReply()
+      let message = await interaction.fetchReply()
       const checkEmptyString = (s) => { if (s != '') return s }
       const guild = await client.guilds.fetch(interaction.guild)
       const member = interaction.member
       const [emojiAnimated, emoji] = guild.emojis.cache.partition(e => e.animataed)
-      let inline = true, name = '\u200B', value = '\u200B';
+      let emptyLine = { inline: true, name: '\u200B', value: '\u200B' }
+
       const embeds = {
         serverinfo: new MessageEmbed({
           title: "Serverinfo",
@@ -126,7 +127,7 @@ module.exports = class HelpInteraction extends Interaction {
               value: `\`\`\`py\n${guild.memberCount - guild.members.cache.filter(m => m.roles.botRole).size}\`\`\``,
               inline
             },
-            { name, value, inline },
+            emptyLine,
             {
               name: "Qntd. Emojis",
               value: `Animado: ${emojiAnimated.size}\nNão animados: ${emoji.size}`,
@@ -137,7 +138,7 @@ module.exports = class HelpInteraction extends Interaction {
               value: `\`\`\`py\n${guild.channels.cache.size}\`\`\``,
               inline
             },
-            { name, value, inline },
+            emptyLine,
             {
               name: "Qntd. Banimentos",
               value: `\`\`\`py\n${guild.bans.cache.size ?? 0}\`\`\``,
@@ -148,7 +149,7 @@ module.exports = class HelpInteraction extends Interaction {
               value: `\`\`\`py\n${guild.roles.cache.size}\`\`\``,
               inline
             },
-            { name, value, inline },
+            emptyLine,
             {
               name: 'Cargo mais alto',
               value: `<@&${guild.roles.highest.id}>`,
@@ -159,7 +160,7 @@ module.exports = class HelpInteraction extends Interaction {
               value: `<@!${guild.ownerId}>`,
               inline
             },
-            { name, value, inline },
+            emptyLine,
             {
               name: 'Entrou ',
               value: `<t:${parseInt(member.joinedTimestamp/1000)}:R>`,

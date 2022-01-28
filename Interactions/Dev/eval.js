@@ -1,8 +1,6 @@
 const Interaction = require('../../Structures/Interaction.js'),
 { inspect } = require('util'),
-{ MessageEmbed } = require('discord.js'),
-{ MongoClient } = require('mongodb'),
-{ writeFileSync, unlinkSync } = require('fs');
+{ MessageEmbed, MessageAttachment } = require('discord.js');
 
 module.exports = class EvalInteraction extends Interaction {
   constructor() {
@@ -24,12 +22,6 @@ module.exports = class EvalInteraction extends Interaction {
           required: false
         },
         {
-          name: 'database',
-          description: 'Conectar ao mongoClient criando a variavel "mongoClient"',
-          type: "BOOLEAN",
-          required: false
-        },
-        {
           name: 'mobile',
           description: 'Caso seja muito grande a resposta e você esteja no celular isso pode ajudar',
           type: "BOOLEAN",
@@ -37,54 +29,37 @@ module.exports = class EvalInteraction extends Interaction {
         }
       ],
       beta: true,
-      channelTypes: ["GUILD_TEXT", "DM"]
+      channelTypes: ["GUILD_TEXT"]
     })
   }
 
-  async execute({ interaction, args, client }) {
-    const embedEval = new MessageEmbed()
-    let attachment = Boolean
-
+  async execute({ interaction, args, client, fanarts, configs, fotos }) {
+    const embedEval = new MessageEmbed({
+      title: "Eval",
+      color: "#2F3136"
+    })
+    
+    let attachment = false, files =[];
+    let retorno;
     try {
-      let execute = ''
-      if (args.getBoolean('discord')) execute += '\nrequire("discord.js")'
-      if (args.getBoolean('database')) execute += `\nconst mongoClient = new MongoClient('${process.env["mongoToken"]}')\n`
-      let retorno = inspect(eval(`${execute}\n${args.getString('código')}`))
+      if (args.getBoolean('discord')) var execute = '\nrequire("discord.js")'
+      retorno = inspect(eval(`${typeof(execute) !== 'undefined' ? execute : ""}\n${args.getString('código')}`))
 
-      if (retorno.length > 999) {
-        attachment = true
-        writeFileSync(`${interaction.user.username}.js`, retorno)
-        if (args.getBoolean('mobile')) embedEval.addField("Retorno", `\`\`\`js\n${retorno.slice(0, 999)}\`\`\``)
-      } else {
-        attachment = false
-        embedEval.addField("Retorno", `\`\`\`js\n${retorno}\`\`\``)
-      }
-      embedEval
-        .setTitle("Eval")
-        .setColor("#2F3136")
-    } catch (e) {
-
-      if (e.message.length > 999) {
-        attachment = true
-        writeFileSync(`${interaction.user.username}.js`, e.message)
-        if (args[3]?.value) embedEval.addField("Retorno", `\`\`\`js\n${e.message.slice(0, 999)}\`\`\``)
-      } else {
-        attachment = false
-        embedEval.addField("Retorno", `\`\`\`js\n${e.message}\`\`\``)
-      }
-
+    } catch ({ message, name }) {
+      retorno = message
       embedEval 
-        .setTitle(e.name)
+        .setTitle(name)
         .setColor("#FF0000")
 
     } finally {
-      interaction.reply({
-        files: attachment ? [`${interaction.user.username}.js`] : [],
-        embeds: [embedEval]
+      if (args.getBoolean('mobile')) embedEval.addField("Retorno", `\`\`\`js\n${retorno.slice(0, 999)}\`\`\``)
+      if (retorno.length < 999) embedEval.addField("Retorno", `\`\`\`js\n${retorno}\`\`\``);
+      else files = [new MessageAttachment(Buffer.from(retorno), `${interaction.user.username}.js`)]
+
+      await interaction.reply({
+        files,
+        embeds: files.at(0) ?  [] : [embedEval]
       })
-        .then(() => {
-          if (attachment) unlinkSync(`${interaction.user.username}.js`)
-        })
     }
   }
 }

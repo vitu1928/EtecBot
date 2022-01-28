@@ -37,8 +37,6 @@ module.exports = class EtecClient extends Client {
     this.events = new Collection()
     this.interactions = new Collection()
 
-    this.mutes = new Collection()
-    this.warns = new Collection()
     this.amores = new Collection()
   }
 

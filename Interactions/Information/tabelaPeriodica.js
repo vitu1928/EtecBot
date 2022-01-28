@@ -2,6 +2,7 @@ const pt = require("periodic-table")
 const translate = require('translate-google')
 const Interaction = require('../../Structures/Interaction.js')
 const { MessageEmbed, MessageButton, MessageActionRow } = require('discord.js')
+// Fazer um SelectMenu para cada tipo?
 
 module.exports = class TabelaPeriodicaInteraction extends Interaction {
   constructor() {
@@ -61,7 +62,7 @@ module.exports = class TabelaPeriodicaInteraction extends Interaction {
           })
         ])
 
-      let arrpt = Object.entries(pt.all())
+      const arrpt = Object.entries(pt.all())
 
       for (let i = 0, arr = arrpt; i < arrpt.length; i++) {
         let a = arrpt[i]
@@ -80,9 +81,8 @@ module.exports = class TabelaPeriodicaInteraction extends Interaction {
         components: [row()]
       })
 
-      let filter = (i) => ['left', 'rigth'].includes(i.customId) && i.user.id == interaction.user.id;
 
-      const collector = message.createMessageComponentCollector({ filter, idle: 60000 })
+      const collector = message.createMessageComponentCollector({ filter:  (i) => ['left', 'rigth'].includes(i.customId) && i.user.id == interaction.user.id, idle: 60000 })
       
       collector.on('collect', async (inter) => {
         switch(inter.customId) {

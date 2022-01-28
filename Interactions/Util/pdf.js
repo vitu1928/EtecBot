@@ -101,12 +101,9 @@ module.exports = class PdfInteraction extends Interaction {
       ],
       components: [rowButton()]
     })
+    
 
-    const filterMenu = (i) => {
-      return (i.customId === 'licaomenu') && i.user.id === authorId
-    }
-
-    const collectorMenu = messageButton.createMessageComponentCollector({ filter: filterMenu, componentType: "SELECT_MENU"})
+    const collectorMenu = messageButton.createMessageComponentCollector({ filter: (i) =>  (i.customId === 'licaomenu') && i.user.id === authorId, componentType: "SELECT_MENU"})
 
     collectorMenu.on('collect', async interact => {
       interact.deferUpdate()

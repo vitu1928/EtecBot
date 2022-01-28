@@ -4,7 +4,7 @@ createServer(function (req, res) {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.write('Iae mundo!')
   res.end();
-}).listen(3000);
+}).listen(process.env.PORT || 3000);
 
 try {
   const EtecClient = require('./Structures/Client.js')

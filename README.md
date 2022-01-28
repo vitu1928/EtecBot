@@ -4,7 +4,7 @@
         <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-%2398C611?style=for-the-badge" />
         <br>
         <!-- Etec bot -->
-        <img src=".github/images/EtecDiscordBot.jpg" alt="Discord bot Etec" width="235px" height="170px">
+        <img src=".github/images/EtecDiscordBot.png" alt="Discord bot Etec" width="235px" height="170px">
         <br>
         <br>
         <img alt="Status" src="https://img.shields.io/website?down_color=red&down_message=offline&label=status&style=for-the-badge&up_message=online&url=https%3A%2F%2FEtec-Bot.lckun.repl.co">

@@ -24,21 +24,21 @@
       <dl><strong>Dev</strong></dl>
       <li type="none">
          <!-- eval -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Dev/eval.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Dev/eval.js">
          eval
          </a>   
       </li>
       <dd>Para os desenvolvedores executarem códigos</dd>
       <!-- npm -->
       <li type="none">
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Dev/npm.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Dev/npm.js">
          npm
          </a>
       </li>
       <dd>Instalar ou desinstalar um pacote</dd>
       <!-- web -->
       <li type="none">
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Fun/web.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Fun/web.js">
          web
          </a>
       </li>
@@ -48,21 +48,21 @@
       <dl><strong>Information</strong></dl>
       <li type="none">
          <!-- ajuda -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Information/ajuda.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Information/ajuda.js">
          ajuda
          </a>
       </li>
       <dd>Precisa de ajuda para usar o bot?</dd>
       <li type="none">
          <!-- lembrete -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Information/lembrete.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Information/lembrete.js">
          lembrete
          </a>
       </li>
       <dd>Lembrete, agendar um lembrete</dd>
       <li type="none">
          <!-- tabelaPeriodica -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Information/tabelaPeriodica.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Information/tabelaPeriodica.js">
          tabelaPeriodica
          </a> 
       </li>
@@ -72,14 +72,14 @@
       <dl><strong>Moderation</strong></dl>
       <li type="none">
          <!-- ban -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Moderation/ban.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Moderation/ban.js">
          ban
          </a>
       </li>
       <dd>Banir membros através das mensagens que eles mandam</dd>
       <li type="none">
          <!-- kick -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Moderation/kick.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Moderation/kick.js">
          kick
          </a> 
       </li>
@@ -89,63 +89,63 @@
       <dl><strong>Util</strong></dl>
       <li type="none">
          <!-- aula -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Util/aula.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/aula.js">
          aula
          </a>
       </li>
       <dd>Era usado nas aulas onlines para ver qual aula era no momento</dd>
       <li type="none">
          <!-- backup -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Util/backup.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/backup.js">
          backup
          </a> 
       </li>
       <dd>Fazer backup das mensagens do servidor</dd>
       <li type="none">
          <!-- cdocauan -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Util/cdocauan.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/cdocauan.js">
          cdocauan
          </a> 
       </li>
       <dd>:flushed: segredo..</dd>
       <li type="none">
          <!-- chamarPraSair -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Util/chamarPraSair.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/chamarPraSair.js">
          chamarPraSair :love_letter: 
          </a> 
       </li>
       <dd>Usado para nossos apaixonados do servidor, um convite chamando para sair :flushed:</dd>
       <li type="none">
          <!-- lição -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Util/lição.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/lição.js">
          lição
          </a> 
       </li>
       <dd>Salvar uma lição na database</dd>
       <li type="none">
          <!-- pdf -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Util/pdf.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/pdf.js">
          pdf
          </a> 
       </li>
       <dd>Fazer um pdf com as fotos das lições</dd>
       <li type="none">
          <!-- procarquivos -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Util/procarquivos.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/procarquivos.js">
          procarquivos
          </a> 
       </li>
       <dd>Procurar algum arquivo salvo na database (de alguma matéria)</dd>
       <li type="none">
          <!-- salvar -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Util/salvar.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/salvar.js">
          salvar
          </a> 
       </li>
-      <dd>Salvar arquivos na database e para pegar use <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Util/procarquivos.js">procarquivos</a></dd>
+      <dd>Salvar arquivos na database e para pegar use <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/procarquivos.js">procarquivos</a></dd>
       <li type="none">
          <!-- tdn -->
-         <a href="https://github.com/vitu1928/EtecBot/blob/main/Interactions/Util/tdn.js">
+         <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/tdn.js">
          tdn
          </a> 
       </li>

@@ -154,9 +154,3 @@
    </ul>
 </div>
 <div align="center">
-<h2>Planos futuros</h2>
-<ul type="none">
-    <li><input type="checkbox"></input> Limpar os códigos: <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions">Interactions</a> -&gt; <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util">Util</a> -&gt; <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/lição.js">lição</a>, <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/pdf.js">pdf</a>, <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/salvar.js">salvar</a>, <a href="https://github.com/vitu1928/EtecBot/tree/main/Interactions/Util/procarquivos.js">procarquivos</a></li>
-    <li><input checked type="checkbox"></input> Corrijir de alguma maneira o problema com a livraria canvas</li>
-    <li><input type="checkbox"></input> Separar por categoria dos elementos em um SelectMenu os elementos do comando tabelaPeriodica</li>
-</ul>
